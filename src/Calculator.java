@@ -46,7 +46,7 @@ public class Calculator extends javax.swing.JFrame {
                 
         }
         
-        if(ans == (int)ans){
+        if(ans == (int)ans){       
             jTextField1.setText(Integer.toString((int) ans));
         }else{
             jTextField1.setText(Double.toString(ans));
@@ -437,7 +437,7 @@ public class Calculator extends javax.swing.JFrame {
         num = Double.parseDouble(jTextField1.getText());
         calculate = 2;  // calling switch case 1
         jTextField1.setText("");  //clearing textfield
-        jLabel1.setText(num + "-");
+        jLabel1.setText(num + "-");    // in the future will be introducted to handle the decimal point when not needed
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
