@@ -36,7 +36,7 @@ public class Calculator extends javax.swing.JFrame {
                 
             case 3:  //Multiplication
                 ans = num * Double.parseDouble(jTextField1.getText());
-                jTextField1.setText(Double.toString(ans));;
+                jTextField1.setText(Double.toString(ans));
                 break;
                 
             case 4: //Division    
@@ -44,12 +44,6 @@ public class Calculator extends javax.swing.JFrame {
                 jTextField1.setText(Double.toString(ans));
                 break;
                 
-        }
-        
-        if(ans == (int) ans){
-            jTextField1.setText(Integer.toString((int) ans));
-        }else{
-            jTextField1.setText(Double.toString(ans));
         }
     }
     
@@ -434,7 +428,6 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-
         num = Double.parseDouble(jTextField1.getText());
         calculate = 2;  // calling switch case 1
         jTextField1.setText("");  //clearing textfield
@@ -457,7 +450,7 @@ public class Calculator extends javax.swing.JFrame {
         num = Double.parseDouble(jTextField1.getText());
         calculate = 3;  // calling switch case 1
         jTextField1.setText("");  //clearing textfield
-        jLabel1.setText(num + "*");      
+        jLabel1.setText(num + "*");
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
@@ -498,17 +491,24 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
+  
         num = Double.parseDouble(jTextField1.getText());
         calculate = 1;  // calling switch case 1
         jTextField1.setText("");  //clearing textfield
         jLabel1.setText(num + "+");
-        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         jTextField1.setText(jTextField1.getText()+ "0");
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        disable();
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        enable();
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
@@ -519,19 +519,11 @@ public class Calculator extends javax.swing.JFrame {
         if(length>0){
             StringBuilder back = new StringBuilder (jTextField1.getText());   //creates empty string builder which is used to store Strings.
             back.deleteCharAt(number);                                      //back is an object of StringBuilder.
-            store = back.toString();                                            //convert StringBuilder 'back' into String, as TextField only tacks string values.    
-            jTextField1.setText(store);
-
+            store = back.toString();                                            //convert StringBuilder 'back' into String, as TextField only tacks string values.
+            jTextField1.setText(store);        
+            
         }
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        disable();
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        enable();
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -562,7 +554,6 @@ public class Calculator extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
             public void run() {
                 new Calculator().setVisible(true);
             }
