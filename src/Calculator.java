@@ -45,6 +45,12 @@ public class Calculator extends javax.swing.JFrame {
                 break;
                 
         }
+        
+        if(ans == (int)ans){
+            jTextField1.setText(Integer.toString((int) ans));
+        }else{
+            jTextField1.setText(Double.toString(ans));
+        }
     }
     
     
